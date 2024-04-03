@@ -1,24 +1,39 @@
-# README
+# SOBRE O PROJETO PROJETOS 🤓
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Ainda não existe um objetivo final desse projeto, o propósito dele é abranger o essencial de Ruby on Rails em elevar meus níveis de aprendizagem, adicionando o necessário para torná-lo uma aplicação quase completa. 
 
-Things you may want to cover:
+### Criação
+`rails new PROJETO -d mysql`
 
-* Ruby version
+⚠️ Lembrar-se de inserir a senha do banco de dados no **database.yml**
 
-* System dependencies
+`rails db:create`
 
-* Configuration
+### Criação do Scaffold de Agenda
 
-* Database creation
+`rails g scaffold Annotation paciente medico dtHoraConsulta:date`
 
-* Database initialization
+** Agenda = letra maiúscula e no singular ⇒ ***model*** 
+** id é gerado automaticamente 
 
-* How to run the test suite
+**⚠️ Caso queira criar mais entidades, utilizar o scaffold novamente.** 
 
-* Services (job queues, cache servers, search engines, etc.)
+### Controller
 
-* Deployment instructions
+`rails g controller welcome index`
 
-* ...
+*Dentro do controller Welcome, tem-se a action Index*
+
+Modifica o index do welcome como quiser
+
+---
+
+Tela de boas-vindas, no qual o usuário vai escolher o que deve fazer atraves de três botões: 
+
+**Cadastrar Agendamento → Lista de Agendamentos → Info dos Médicos** 
+
+---
+
+### Rotas
+
+- root welcome#index
