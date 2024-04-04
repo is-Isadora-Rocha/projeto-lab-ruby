@@ -63,3 +63,18 @@ Tela de boas-vindas, no qual o usuário vai escolher o que deve fazer atraves de
 
   Cada um desses auxiliares possui um (_url) auxiliar correspondente (como photos_url) que retorna o mesmo caminho prefixado com o host, porta e prefixo de caminho atuais.
 
+  ## BOOTSTRAP
+
+  #### TWITTER BOOTSTRAP
+  gem "therubyracer"
+  gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+  gem "twitter-bootstrap-rails"
+
+  ### GENERATE BOOTSTRAP
+  - rails generate bootstrap:install less
+  - rails generate bootstrap:layout application fluid
+  - rails generate bootstrap:themed ***Annotations (nosso model no plural)*** 
+  - rails generate bootstrap:themed ***Friends*** ***(nosso model no plural)***
+
+  Annotations e Friends são model de outro projeto, estou usando como exemplo para não esquecer. 
+
