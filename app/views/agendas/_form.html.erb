@@ -1,32 +1,48 @@
-<%= form_with(model: agenda) do |form| %>
-  <% if agenda.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(agenda.errors.count, "error") %> prohibited this agenda from being saved:</h2>
+<%= form_for @agenda, :html => { :class => "form-horizontal agenda" } do |f| %>
 
-      <ul>
-        <% agenda.errors.each do |error| %>
-          <li><%= error.full_message %></li>
+  <% if @agenda.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@agenda.errors.count, "error") %> prohibited this agenda from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @agenda.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
         <% end %>
-      </ul>
+        </ul>
+      </div>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :paciente, style: "display: block" %>
-    <%= form.text_field :paciente %>
+  <div class="form-group">
+    <%= f.label :paciente, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :paciente, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:paciente) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :medico, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :medico, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:medico) %>
+  </div>
+  <div class="form-group">
+    <%= f.label :dtHoraConsulta, :class => 'control-label col-lg-2' %>
+    <div class="col-lg-10">
+      <%= f.text_field :dtHoraConsulta, :class => 'form-control' %>
+    </div>
+    <%=f.error_span(:dtHoraConsulta) %>
   </div>
 
-  <div>
-    <%= form.label :medico, style: "display: block" %>
-    <%= form.text_field :medico %>
+  <div class="form-group">
+    <div class="col-lg-offset-2 col-lg-10">
+      <%= f.submit nil, :class => 'btn btn-primary' %>
+      <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                agendas_path, :class => 'btn btn-default' %>
+    </div>
   </div>
 
-  <div>
-    <%= form.label :dtHoraConsulta, style: "display: block" %>
-    <%= form.date_field :dtHoraConsulta %>
-  </div>
-
-  <div>
-    <%= form.submit %>
-  </div>
 <% end %>

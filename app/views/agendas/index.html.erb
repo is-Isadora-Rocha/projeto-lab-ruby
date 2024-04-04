@@ -1,14 +1,42 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Agendas</h1>
-
-<div id="agendas">
-  <% @agendas.each do |agenda| %>
-    <%= render agenda %>
-    <p>
-      <%= link_to "Show this agenda", agenda %>
-    </p>
-  <% end %>
+<%- model_class = Agenda -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => model_class.model_name.human.pluralize.titleize %></h1>
 </div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:id) %></th>
+      <th><%= model_class.human_attribute_name(:paciente) %></th>
+      <th><%= model_class.human_attribute_name(:medico) %></th>
+      <th><%= model_class.human_attribute_name(:dtHoraConsulta) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @agendas.each do |agenda| %>
+      <tr>
+        <td><%= link_to agenda.id, agenda_path(agenda) %></td>
+        <td><%= agenda.paciente %></td>
+        <td><%= agenda.medico %></td>
+        <td><%= agenda.dtHoraConsulta %></td>
+        <td><%=l agenda.created_at %></td>
+        <td>
+          <%= link_to t('.show', :default => t("helpers.links.show")),
+                      agenda_path(agenda), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_agenda_path(agenda), :class => 'btn btn-default btn-xs' %>
+          <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      agenda_path(agenda),
+                      :method => :delete,
+                      :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+                      :class => 'btn btn-xs btn-danger' %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
-<%= link_to "New agenda", new_agenda_path %>
+<%= link_to t('.new', :default => t("helpers.links.new")),
+            new_agenda_path,
+            :class => 'btn btn-primary' %>
