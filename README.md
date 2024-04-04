@@ -56,8 +56,8 @@ Tela de boas-vindas, no qual o usuário vai escolher o que deve fazer atraves de
 
 
     
-
->> resources :photo 
+ROTA COMPLETA: 
+`resources :photo`
 | Helper           | Retorna         | Exemplo de Uso             |
 |------------------|-----------------|-----------------------------|
 | photos_path      | /photos         |                           |
