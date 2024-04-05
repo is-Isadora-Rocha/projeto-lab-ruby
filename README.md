@@ -14,7 +14,7 @@ Ainda não existe um objetivo final desse projeto, o propósito dele é abranger
 
 ### Criação do Scaffold de Agenda
 
-`rails g scaffold Annotation paciente medico dtHoraConsulta:date`
+`rails g scaffold Agenda paciente medico dtHoraConsulta:date`
 
 ** Agenda = letra maiúscula e no singular ⇒ ***model*** 
 ** id é gerado automaticamente 
