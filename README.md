@@ -81,3 +81,21 @@ ROTA COMPLETA:
 
   Annotations e Friends são model de outro projeto, estou usando como exemplo para não esquecer. 
 
+## TROUBLESHOOTING
+
+#### Na página WELCOME index:
+`<%= link_to 'Cadastro de Agenda', agendas_path %>`
+
+Ocorreu o seguinte erro: 
+<p class="red-text">undefined method `edit_agenda_path' for an instance of #<Class: </p>
+
+<style>
+        .red-text {
+            color: red;
+        }
+</style>
+
+### SOLUÇÃO: 
+Em routes: 
+    get '/agendas/:id/edit', to: 'agendas#edit', `as: :edit_agenda`
+  Foi adicionado o as: :edit_agenda para que o rails encontre o caminho do método
