@@ -95,4 +95,4 @@ Em routes:
 
 - get '/agendas/:id/edit', to: 'agendas#edit', `as: :edit_agenda`
 
-Foi adicionado o as: :edit_agenda para que o rails encontre o caminho do método
+Foi adicionado o `as: :edit_agenda` para que o rails encontre o caminho do método
