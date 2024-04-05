@@ -1,2 +1,19 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h1>Página index do welcome</h1>
+
+<h4>Estou em app > views > welcome > index.html.erb</h4></br>
+<h4>
+    Após o <b>controlador</b> ter processado a solicitação e <b>obtido os dados
+    necessários do modelo</b>, ele renderiza uma visão para ser enviada de volta
+    ao navegador. Ou seja, aqui recebe as <b>informações do controlador</b> e gera a interface
+    do usuário.
+</h4></br>
+
+<h4>
+    <%= @var_controller_index %>
+</h4>
+
+<p>A frase acima está instanciada aqui no index da pasta welcome 
+    é só colocar: @var_controller_index que aparece o que está dentro do método INDEX do controller. 
+    Dentro desse método, está declarada essa variável no qual faz referência a essa frase acima.</p>
+
+
