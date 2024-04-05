@@ -8,6 +8,9 @@ class AgendasController < ApplicationController
 
   # GET /agendas/1 or /agendas/1.json
   def show
+    @parametros = params
+    #? O params é um obj fornecido pelo Rails que contém todos os parâmetros passados para solicitação HTTP.
+    #? Ele pode incluir informações como os parâmetros de consulta, de rota e dos dados do formulário submetido. 
   end
 
   # GET /agendas/new
