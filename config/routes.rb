@@ -12,7 +12,8 @@ Rails.application.routes.draw do
     get '/agendas', to: 'agendas#index'
     get '/agendas/new', to: 'agendas#new', as: 'new_agenda'
     post '/agendas', to: 'agendas#create'
-    get '/agendas/:id/edit', to: 'agendas#edit'
+    get '/agendas/:id/edit', to: 'agendas#edit', as: :edit_agenda
+    #aqui em edit ocorreu o mesmo erro de undefind local... method, foi colocado o as: :edit_agenda
     put '/agendas/:id', to: 'agendas#update'
     delete '/agendas/:id', to: 'agendas#destroy', as: :agenda
   # }
