@@ -96,3 +96,10 @@ Em routes:
 - get '/agendas/:id/edit', to: 'agendas#edit', `as: :edit_agenda`
 
 Foi adicionado o `as: :edit_agenda` para que o rails encontre o caminho do método
+
+
+## ADD NOVO CAMPO APÓS O PRIMEIRO SCAFFOLD
+
+- `rails g scaffold Medico name experience`
+
+Para poder cadastrar um novo médico e sua experiência
