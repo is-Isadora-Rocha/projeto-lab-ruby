@@ -14,7 +14,6 @@ class AgendasTest < ApplicationSystemTestCase
     visit agendas_url
     click_on "New agenda"
 
-    fill_in "Dthoraconsulta", with: @agenda.dtHoraConsulta
     fill_in "Medico", with: @agenda.medico
     fill_in "Paciente", with: @agenda.paciente
     click_on "Create Agenda"
@@ -27,7 +26,6 @@ class AgendasTest < ApplicationSystemTestCase
     visit agenda_url(@agenda)
     click_on "Edit this agenda", match: :first
 
-    fill_in "Dthoraconsulta", with: @agenda.dtHoraConsulta
     fill_in "Medico", with: @agenda.medico
     fill_in "Paciente", with: @agenda.paciente
     click_on "Update Agenda"

@@ -17,7 +17,7 @@ class AgendasControllerTest < ActionDispatch::IntegrationTest
 
   test "should create agenda" do
     assert_difference("Agenda.count") do
-      post agendas_url, params: { agenda: { dtHoraConsulta: @agenda.dtHoraConsulta, medico: @agenda.medico, paciente: @agenda.paciente } }
+      post agendas_url, params: { agenda: { medico: @agenda.medico, paciente: @agenda.paciente } }
     end
 
     assert_redirected_to agenda_url(Agenda.last)
@@ -34,7 +34,7 @@ class AgendasControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update agenda" do
-    patch agenda_url(@agenda), params: { agenda: { dtHoraConsulta: @agenda.dtHoraConsulta, medico: @agenda.medico, paciente: @agenda.paciente } }
+    patch agenda_url(@agenda), params: { agenda: { medico: @agenda.medico, paciente: @agenda.paciente } }
     assert_redirected_to agenda_url(@agenda)
   end
 
