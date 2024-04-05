@@ -87,13 +87,8 @@ ROTA COMPLETA:
 `<%= link_to 'Cadastro de Agenda', agendas_path %>`
 
 Ocorreu o seguinte erro: 
-<p class="red-text">undefined method `edit_agenda_path' for an instance of #<Class: </p>
+**_undefined method `edit_agenda_path' for an instance of #<Class:<...>_**
 
-<style>
-        .red-text {
-            color: red;
-        }
-</style>
 
 ### SOLUÇÃO: 
 Em routes: 
