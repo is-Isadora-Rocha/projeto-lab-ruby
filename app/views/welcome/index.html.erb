@@ -15,5 +15,15 @@
 <p>A frase acima está instanciada aqui no index da pasta welcome 
     é só colocar: @var_controller_index que aparece o que está dentro do método INDEX do controller. 
     Dentro desse método, está declarada essa variável no qual faz referência a essa frase acima.</p>
+</br>
 
+<h2>AGENDAS</h2>
+<!-- 
+#! Existem duas formas de como colocar um link para uma página, 
+#! essa forma abaixo não é tão recomendada pois tem que escrever manualmente a rota e 
+#! em caso de alteração, terá que alterar manualmente cada uma. 
+<a href="/agendas/new">Cadastro de Agenda</a> 
 
+#? O recomendável é que seja escrita as rotas com o seu path 
+-->
+<%= link_to 'Cadastro de Agenda', agendas_path %>
