@@ -2,6 +2,9 @@
 
 Ainda não existe um objetivo final desse projeto, o propósito dele é abranger o essencial de Ruby on Rails em elevar meus níveis de aprendizagem, adicionando o necessário para torná-lo uma aplicação quase completa. 
 
+![image](https://github.com/is-Isadora-Rocha/projeto-lab-ruby/assets/115477897/3317fcfe-d98b-416d-b778-fcc2890f57cf)
+
+
 ### Criação
 `rails new PROJETO -d mysql`
 
