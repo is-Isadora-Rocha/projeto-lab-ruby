@@ -97,6 +97,18 @@ Em routes:
 
 Foi adicionado o `as: :edit_agenda` para que o rails encontre o caminho do método
 
+--- 
+
+###  Observação
+
+- `get '/agendas/new', to: 'agendas#new'`
+
+`Showing /home/ccn/rails/projeto/app/views/agendas/index.html.erb where line #14 raised:`
+Ocorreu o seguinte erro: undefined local variable or method `new_agenda_path': 
+<%= link_to "New agenda", new_agenda_path %>
+
+- A solução é: get '/agendas/new', to: 'agendas#new', as: 'new_agenda' para que a rota identifique o pacote que está sendo utilizado
+
 
 ## ADD NOVO CAMPO APÓS O PRIMEIRO SCAFFOLD
 

@@ -20,15 +20,4 @@ Rails.application.routes.draw do
     delete '/agendas/:id', to: 'agendas#destroy', as: :agenda
   # }
 
-
-#TODO:  ####   Observação    ####
-
-#? => get '/agendas/new', to: 'agendas#new'
-#! Showing /home/ccn/rails/projeto/app/views/agendas/index.html.erb where line #14 raised:
-#! ocorreu o seguinte erro: undefined local variable or method `new_agenda_path': 
-#! <%= link_to "New agenda", new_agenda_path %>
-
-#* A solução é: get '/agendas/new', to: 'agendas#new', as: 'new_agenda'
-#* para que a rota identifique o pacote que está sendo utilizado
-
 end
