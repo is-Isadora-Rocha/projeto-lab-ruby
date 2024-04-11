@@ -118,3 +118,9 @@ Ocorreu o seguinte erro: undefined local variable or method `new_agenda_path':
 - `rails g scaffold Medico name experience`
 
 Para poder cadastrar um novo médico e sua experiência
+
+
+## ADD PEDIDOS PARA TESTE DE ESTUDO
+
+- `rails g scaffold Pedido nome__cliente data_pedido:date status_pedido:integer forma_pagamento:integer valor_total:decimal`
+

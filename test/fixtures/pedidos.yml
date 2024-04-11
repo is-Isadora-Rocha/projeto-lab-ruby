@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome__cliente: MyString
+  data_pedido: 2024-04-08
+  status_pedido: 1
+  forma_pagamento: 1
+  valor_total: 9.99
+
+two:
+  nome__cliente: MyString
+  data_pedido: 2024-04-08
+  status_pedido: 1
+  forma_pagamento: 1
+  valor_total: 9.99
